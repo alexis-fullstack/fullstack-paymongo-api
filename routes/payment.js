@@ -31,11 +31,13 @@ router.post("/", cors(corsOptions), async function(request, response) {
     //     }
     //   }
     // }
+    let { paymentAmount } = request.body;
+    paymentAmount = paymentAmount * 100
 
     const payload = {
       data: {
         attributes: {
-          amount: request.body.paymentAmount, 
+          amount: paymentAmount, 
           currency: 'PHP', 
           payment_method_allowed: ['card'] 
         }
@@ -43,8 +45,6 @@ router.post("/", cors(corsOptions), async function(request, response) {
     }
 
     const paymentIntent = await paymongo.paymentIntents.create(payload);
-
-    const { paymentAmount } = request.body;
 
     response.json(paymentIntent);
   } catch (err) {
