@@ -1145,10 +1145,12 @@ path-to-regexp@0.1.7:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
 
-paymongo@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/paymongo/-/paymongo-0.3.6.tgz#1831615ec5fdadd37346e053367d9884335791fd"
-  integrity sha512-yIVVg1qAYIj3QXJIUKzRELlcC/0+nfJn1hPEy1Dk5/m8leaaAPJuU4ET5G3zVT1JHlhohNQTD71QEyrAXa+cHQ==
+paymongo@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/paymongo/-/paymongo-1.0.2.tgz#237d7d50345ec763bfe3e2ab63f5e348d63304b1"
+  integrity sha512-4q1coOEUi/El0jhn6AonkxlSdnbKQAR1zfxDWNyXcVTaP1rG6zD9EBbFnPKzR+lMdApvZkfGk9PON0MHdMm/FA==
+  dependencies:
+    request "^2.88.2"
 
 performance-now@^2.1.0:
   version "2.1.0"
