@@ -37,13 +37,13 @@ router.post('/', async (req, res) => {
 
 router.post('/:id/attach', async (req, res) => {
   const { id } = req.params
-  const { payment_method_id, client_key, return_url } = req.body
+  const { payment_method, client_key, return_url } = req.body
 
   try {
     const payload = {
       data: {
         attributes: {
-          payment_method: payment_method_id,
+          payment_method,
           client_key,
           return_url
         }
